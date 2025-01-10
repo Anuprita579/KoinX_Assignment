@@ -1,0 +1,12 @@
+.breadcrumbs{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    .breadcrumb-item{
+        display: flex;
+        align-items: center;
+        .breadcrumb-icon{
+            padding: 0 2px !important; 
+        }
+    }
+}

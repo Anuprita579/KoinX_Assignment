@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$screen-ratio: 1vw;
+@import "../../theme.scss";
+
+html * {
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.homePage{
+    background-color: #EFF2F5;
+    padding: calc($screen-ratio * 1) calc($screen-ratio * 3);
+}
+
+.stockContainer{
+    .stockDetails{
+        display: flex;
+        align-items: center;
+        gap: calc($screen-ratio*0.4);
+        .stockLogo{
+            height: calc($screen-ratio*2);
+        }
+        .stockName{
+            font-weight: $font-weight-semibold;
+            font-size: large;
+        }
+        .stockShortName{
+            font-weight: $font-weight-semibold;
+            font-size: smaller;
+            color: gray;
+        }
+    }
+
+}
