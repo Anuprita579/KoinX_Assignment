@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$screen-ratio: 1vw;
+@import "../../theme.scss";
+
+.outerContainer {
+  display: flex;
+  flex-direction: column;
+  padding: calc($screen-ratio * 1.6);
+  gap: calc($screen-ratio * 2.6);
+  width: 100%;
+  background-color: #fff;
+
+  .title {
+    font-size: calc($screen-ratio * 1.6);
+    font-weight: $font-weight-semibold;
+  }
+
+  .performanceDetailsBox {
+    display: flex;
+    flex-direction: column;
+    gap: calc($screen-ratio * 1.1);
+  }
+
+  .fundamentalContainer {
+    display: flex;
+    flex-direction: column;
+    gap: calc($screen-ratio * 1.1);
+
+    .fundamentalTitle {
+      font-size: calc($screen-ratio * 1.251);
+    }
+
+    .statsDetailsBox {
+      display: flex;
+      gap: calc($screen-ratio * 6);
+
+      .statsBox {
+        flex: 1;
+      }
+    }
+  }
+}
+
+.trendBox {
+  width: 100%;
+  display: flex;
+  gap: calc($screen-ratio * 2.5);
+
+  .lowBox {
+    display: flex;
+    flex-direction: column;
+    gap: calc($screen-ratio * 0.7);
+
+    .text {
+      font-size: calc($screen-ratio * 1);
+      font-weight: $font-weight-semibold;
+    }
+
+    .value {
+      font-size: calc($screen-ratio * 1);
+      font-weight: $font-weight-medium;
+    }
+  }
+}
+
+.statCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: $font-weight-medium;
+  font-size: calc($screen-ratio * 0.97);
+  //   padding: calc($screen-ratio * 1.1) 0;
+  height: calc($screen-ratio * 4.9);
+  border-bottom: 1px solid #d3e0e6;
+
+  .label {
+    color: #768396;
+  }
+
+  .valueBox {
+    display: flex;
+    flex-direction: column;
+    gap: calc($screen-ratio * 0.3);
+
+    .value {
+      color: #111827;
+
+      span {
+        padding-left: calc($screen-ratio * 0.5);
+      }
+
+      .profit {
+        color: #0fba83;
+      }
+      .loss {
+        color: #f7324c;
+      }
+    }
+
+    .dateSection {
+      font-size: calc($screen-ratio * 0.76);
+    }
+  }
+}

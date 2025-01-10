@@ -2,34 +2,30 @@
 $screen-ratio: 1vw;
 @import "../../theme.scss";
 
-html * {
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
+.homePage {
+  background-color: #eff2f5;
+  padding: calc($screen-ratio * 1) calc($screen-ratio * 3);
+  display: flex;
+  flex-direction: column;
+  gap: calc($screen-ratio * 1.4);
 }
 
-.homePage{
-    background-color: #EFF2F5;
-    padding: calc($screen-ratio * 1) calc($screen-ratio * 3);
-}
-
-.stockContainer{
-    .stockDetails{
-        display: flex;
-        align-items: center;
-        gap: calc($screen-ratio*0.4);
-        .stockLogo{
-            height: calc($screen-ratio*2);
-        }
-        .stockName{
-            font-weight: $font-weight-semibold;
-            font-size: large;
-        }
-        .stockShortName{
-            font-weight: $font-weight-semibold;
-            font-size: smaller;
-            color: gray;
-        }
+.stockContainer {
+  .stockDetails {
+    display: flex;
+    align-items: center;
+    gap: calc($screen-ratio * 0.4);
+    .stockLogo {
+      height: calc($screen-ratio * 2);
     }
-
+    .stockName {
+      font-weight: $font-weight-semibold;
+      font-size: large;
+    }
+    .stockShortName {
+      font-weight: $font-weight-semibold;
+      font-size: smaller;
+      color: gray;
+    }
+  }
 }

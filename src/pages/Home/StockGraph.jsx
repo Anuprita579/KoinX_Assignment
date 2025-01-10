@@ -21,12 +21,12 @@ const fetchGraphData = async () => {
   //     "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true%27?x_cg_demo_api_key=CG-JLUiV4oYV3siBiSKEV4HEZ9h"
   //   );
   //   if (response.data) {
-  console.log({ respdata: response.data });
+  // console.log({ respdata: response.data });
   const responseObj = {
     inr: 8057078,
     usd: 93528,
   };
-  setGraph(responseObj);
+  // setGraph(responseObj);
   // setGraph(response.data);
   //   }
 };
