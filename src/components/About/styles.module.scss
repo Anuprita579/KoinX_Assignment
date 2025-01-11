@@ -1,20 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-$screen-ratio: 1vw;
 @import "../../theme.scss";
 
 .aboutCard {
   display: flex;
   flex-direction: column;
-  gap: calc($screen-ratio * 1.66);
+  gap: calc(var(--screen-ratio) * 1.66);
 
   .title {
-    font-size: calc($screen-ratio * 1.4);
+    font-size: calc(var(--screen-ratio) * 1.4);
     font-weight: $font-weight-semibold;
     color: #1d1d1d;
   }
 
   .description {
-    font-size: calc($screen-ratio * 1.1);
+    font-size: calc(var(--screen-ratio) * 1.1);
     font-weight: $font-weight-medium;
     color: #3e424a;
   }
@@ -28,15 +27,15 @@ $screen-ratio: 1vw;
 
   .cardsContainer{
     display: flex;
-    gap: calc($screen-ratio);
+    gap: calc(var(--screen-ratio));
 
     .upsellingCard {
-      border-radius: calc($screen-ratio * 0.56);
+      border-radius: calc(var(--screen-ratio) * 0.56);
       flex: 1;
       background: linear-gradient(135deg, #79f1a4 0%, #0e5cad 100%);
-      padding: $screen-ratio calc($screen-ratio * 2) $screen-ratio $screen-ratio;
+      padding: var(--screen-ratio) calc(var(--screen-ratio) * 2) var(--screen-ratio) var(--screen-ratio);
       display: flex;
-      gap: calc($screen-ratio * 2.9);
+      gap: calc(var(--screen-ratio) * 2.9);
       align-items: center;
   
       &.orangeBkg {
@@ -44,28 +43,28 @@ $screen-ratio: 1vw;
       }
   
       .aboutImg {
-        width: calc($screen-ratio * 8.8);
-        height: calc($screen-ratio * 8.8);
+        width: calc(var(--screen-ratio) * 8.8);
+        height: calc(var(--screen-ratio) * 8.8);
         object-fit: cover;
-        border-radius: calc($screen-ratio * 0.56);
+        border-radius: calc(var(--screen-ratio) * 0.56);
       }
   
       .rightSection {
         display: flex;
         flex-direction: column;
-        gap: calc($screen-ratio * 1.1);
+        gap: calc(var(--screen-ratio) * 1.1);
   
         .cardTitle {
-          font-size: calc($screen-ratio * 1.4);
+          font-size: calc(var(--screen-ratio) * 1.4);
           font-weight: $font-weight-bold;
           color: #fff;
         }
   
         .cta {
           background-color: #fff;
-          padding: calc($screen-ratio * 0.5) $screen-ratio;
+          padding: calc(var(--screen-ratio) * 0.5) var(--screen-ratio);
           color: #0f1629;
-          font-size:  $screen-ratio;
+          font-size:  var(--screen-ratio);
           font-weight: $font-weight-semibold;
           width: fit-content;
         }
@@ -78,13 +77,13 @@ $screen-ratio: 1vw;
 .aboutContainer {
   display: flex;
   flex-direction: column;
-  gap: calc($screen-ratio * 1.66);
+  gap: calc(var(--screen-ratio) * 1.66);
   background-color: #fff;
-  padding: calc($screen-ratio * 1.66);
+  padding: calc(var(--screen-ratio) * 1.66);
   color: #0f1629;
 
   .heading {
-    font-size: calc($screen-ratio * 1.66);
+    font-size: calc(var(--screen-ratio) * 1.66);
     font-weight: $font-weight-semibold;
   }
 }

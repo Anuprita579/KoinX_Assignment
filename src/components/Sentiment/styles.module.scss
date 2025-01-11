@@ -1,24 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-$screen-ratio: 1vw;
 @import "../../theme.scss";
 
 .eventCard {
   display: flex;
-  padding: calc($screen-ratio * 1.2) calc($screen-ratio * 1.2)
-    calc($screen-ratio * 2) calc($screen-ratio * 1.2);
-  width: calc($screen-ratio * 30);
-  gap: calc($screen-ratio * 0.5);
-  border-radius: calc($screen-ratio * 0.5);
+  padding: calc(var(--screen-ratio) * 1.2) calc(var(--screen-ratio) * 1.2)
+    calc(var(--screen-ratio) * 2) calc(var(--screen-ratio) * 1.2);
+  width: calc(var(--screen-ratio) * 30);
+  gap: calc(var(--screen-ratio) * 0.5);
+  border-radius: calc(var(--screen-ratio) * 0.5);
   .logoContainer {
     color: white;
     height: fit-content;
-    padding: calc($screen-ratio * 0.5);
+    padding: calc(var(--screen-ratio) * 0.5);
     border-radius: 50%;
   }
   .eventContent {
     .eventTitle {
       font-weight: $font-weight-medium;
-      font-size: calc($screen-ratio * 1);
+      font-size: calc(var(--screen-ratio) * 1);
     }
     .eventSubTitle {
       color: #3e5765;
@@ -28,9 +27,9 @@ $screen-ratio: 1vw;
 .keyEvents {
   .subheading {
     font-weight: $font-weight-semibold;
-    font-size: calc($screen-ratio * 1.2);
+    font-size: calc(var(--screen-ratio) * 1.2);
     color: #44475b;
-    padding-bottom: calc($screen-ratio*1.1);
+    padding-bottom: calc(var(--screen-ratio)*1.1);
     .tooltipStyle {
       padding: 0 !important;
       .infoicon {
@@ -45,10 +44,10 @@ $screen-ratio: 1vw;
 .analystEstimate{
     .subheading {
         font-weight: $font-weight-semibold;
-        font-size: calc($screen-ratio * 1.2);
+        font-size: calc(var(--screen-ratio) * 1.2);
         color: #44475b;
-        padding-bottom: calc($screen-ratio*1.1);
-        padding-top: calc($screen-ratio*2.2);
+        padding-bottom: calc(var(--screen-ratio)*1.1);
+        padding-top: calc(var(--screen-ratio)*2.2);
         .tooltipStyle {
           padding: 0 !important;
           .infoicon {
@@ -62,24 +61,24 @@ $screen-ratio: 1vw;
     .analystEstimateContainer{
         display: flex;
         align-items: center;
-        gap: calc($screen-ratio*2.5);
+        gap: calc(var(--screen-ratio)*2.5);
         .analysisPercentage{
             display: flex;
             align-items: center;
-            padding: calc($screen-ratio*3);
+            padding: calc(var(--screen-ratio)*3);
             border-radius: 50%;
             color: #0FBA83;
             font-weight: $font-weight-semibold;
-            font-size: calc($screen-ratio*2);
+            font-size: calc(var(--screen-ratio)*2);
             background-color: #EBF9F4;
             .percentIcon{
-                font-size: calc($screen-ratio*1);
+                font-size: calc(var(--screen-ratio)*1);
             }
         }
         .progressSection{
             display: grid;
             grid-template-columns: 3rem 1fr;
-            gap: calc($screen-ratio*0.75);
+            gap: calc(var(--screen-ratio)*0.75);
             .buyStatus{
                 font-weight: $font-weight-medium;
                 color: #7C7E8C;
@@ -87,24 +86,24 @@ $screen-ratio: 1vw;
             .buyStatusBox{
                 display: flex;
                 align-items: center;
-                gap: calc($screen-ratio*0.5);
+                gap: calc(var(--screen-ratio)*0.5);
                 .buyPercent{
-                    width: calc($screen-ratio*24);
+                    width: calc(var(--screen-ratio)*24);
                     height: 8px;
                     background-color: #0FBA83;
-                    border-radius: calc($screen-ratio*0.5);
+                    border-radius: calc(var(--screen-ratio)*0.5);
                 }
                 .holdPercent{
-                    width: calc($screen-ratio*2);
+                    width: calc(var(--screen-ratio)*2);
                     height: 8px;
                     background-color: #C7C8CE;
-                    border-radius: calc($screen-ratio*0.5);
+                    border-radius: calc(var(--screen-ratio)*0.5);
                 }
                 .sellPercent{
-                    width: calc($screen-ratio*4.5);
+                    width: calc(var(--screen-ratio)*4.5);
                     height: 8px;
                     background-color: #F7324C;
-                    border-radius: calc($screen-ratio*0.5);
+                    border-radius: calc(var(--screen-ratio)*0.5);
                 }
             }
             
@@ -113,11 +112,11 @@ $screen-ratio: 1vw;
 }
 .sentiment {
   background-color: $background-color-light;
-  padding: calc($screen-ratio * 2.2);
+  padding: calc(var(--screen-ratio) * 2.2);
   .heading {
-    font-size: calc($screen-ratio * 1.66);
+    font-size: calc(var(--screen-ratio) * 1.66);
     font-weight: $font-weight-semibold;
-    padding-bottom: calc($screen-ratio*1.1);
+    padding-bottom: calc(var(--screen-ratio)*1.1);
   }
 }
 .swiperSlide {

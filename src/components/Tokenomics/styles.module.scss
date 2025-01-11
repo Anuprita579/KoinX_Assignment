@@ -1,29 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-$screen-ratio: 1vw;
 @import "../../theme.scss";
 
 .tokenomicsContainer {
   display: flex;
   flex-direction: column;
-  gap: calc($screen-ratio * 1.66);
+  gap: calc(var(--screen-ratio) * 1.66);
   background-color: #fff;
-  padding: calc($screen-ratio * 1.66);
+  padding: calc(var(--screen-ratio) * 1.66);
   color: #0f1629;
 
 
   .heading {
-    font-size: calc($screen-ratio * 1.66);
+    font-size: calc(var(--screen-ratio) * 1.66);
     font-weight: $font-weight-semibold;
   }
 
   .title {
-    font-size: calc($screen-ratio * 1.4);
+    font-size: calc(var(--screen-ratio) * 1.4);
     font-weight: $font-weight-semibold;
     color: #1d1d1d;
   }
 
   .subText {
-    font-size: calc($screen-ratio * 1.1);
+    font-size: calc(var(--screen-ratio) * 1.1);
     font-weight: $font-weight-medium;
     color: #3e424a;
   }

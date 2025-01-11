@@ -1,3 +1,13 @@
+:root {
+  --screen-ratio: 1vw;
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    --screen-ratio: 3.88vw; 
+  }
+}
+
 // Font Families
 $font-family-primary: 'Helvetica Neue', Arial, sans-serif;
 $font-family-secondary: 'Georgia', serif;

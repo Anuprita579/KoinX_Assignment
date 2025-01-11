@@ -1,36 +1,40 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-$screen-ratio: 1vw;
+// $screen-ratio: 1vw;
 @import "../../theme.scss";
+
+:root {
+  --screen-ratio: 1vw;
+}
 
 .teamCard {
   display: flex;
-  gap: calc($screen-ratio * 1.2);
+  gap: calc(var(--screen-ratio) * 1.2);;
   align-items: center;
   background-color: #e8f4fd;
-  padding: calc($screen-ratio * 0.76) calc($screen-ratio * 1.8);
-  border-radius: calc($screen-ratio * 0.56);
+  padding: calc(var(--screen-ratio) * 0.76) calc(var(--screen-ratio) * 1.8);
+  border-radius: calc(var(--screen-ratio) * 0.56);
 
   .leftSection {
     display: flex;
     flex-direction: column;
-    gap: calc($screen-ratio * 0.6);
-    padding: 0 calc($screen-ratio * 1.11);
+    gap: calc(var(--screen-ratio) * 0.6);
+    padding: 0 calc(var(--screen-ratio) * 1.11);
     align-items: center;
 
     .profileImg {
-      width: calc($screen-ratio * 6);
-      border-radius: calc($screen-ratio * 0.4);
+      width: calc(var(--screen-ratio) * 6);
+      border-radius: calc(var(--screen-ratio) * 0.4);
       height: auto;
     }
 
     .name {
-      font-size: calc($screen-ratio * 1.1);
+      font-size: calc(var(--screen-ratio) * 1.1);
       font-weight: $font-weight-semibold;
       white-space: nowrap;
     }
 
     .designation {
-      font-size: calc($screen-ratio * 0.834);
+      font-size: calc(var(--screen-ratio) * 0.834);
       font-weight: $font-weight-medium;
       color: #788f9b;
       white-space: nowrap;
@@ -38,25 +42,25 @@ $screen-ratio: 1vw;
   }
 
   .description {
-    font-size: calc($screen-ratio * 0.97);
+    font-size: calc(var(--screen-ratio) * 0.97);
   }
 }
 
 .teamsContainer {
   display: flex;
   flex-direction: column;
-  gap: calc($screen-ratio * 1.66);
+  gap: calc(var(--screen-ratio) * 1.66);
   background-color: #fff;
-  padding: calc($screen-ratio * 1.66);
+  padding: calc(var(--screen-ratio) * 1.66);
   color: #0f1629;
 
   .heading {
-    font-size: calc($screen-ratio * 1.66);
+    font-size: calc(var(--screen-ratio) * 1.66);
     font-weight: $font-weight-semibold;
   }
 
   .subText {
-    font-size: calc($screen-ratio * 1.1);
+    font-size: calc(var(--screen-ratio) * 1.1);
     font-weight: $font-weight-medium;
     color: #3e424a;
   }

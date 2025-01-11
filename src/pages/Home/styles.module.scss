@@ -1,30 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-$screen-ratio: 1vw;
 @import "../../theme.scss";
 
 .homePage {
   background-color: #eff2f5;
-  padding: calc($screen-ratio * 1) calc($screen-ratio * 3);
+  padding: calc(var(--screen-ratio) * 1) calc(var(--screen-ratio) * 3);
   display: flex;
   flex-direction: column;
-  gap: calc($screen-ratio * 1.4);
+  gap: calc(var(--screen-ratio) * 1.4);
 
   .mainPage {
     display: flex;
-    gap: calc($screen-ratio * 1.4);
+    gap: calc(var(--screen-ratio) * 1.4);
 
     .leftSection {
       flex: 1;
       display: flex;
       flex-direction: column;
-      gap: calc($screen-ratio * 1.4);
+      gap: calc(var(--screen-ratio) * 1.4);
       width: 70%;
     }
 
     .rightSection {
       display: flex;
       flex-direction: column;
-      gap: calc($screen-ratio * 1.4);
+      gap: calc(var(--screen-ratio) * 1.4);
       width: 30%;
     }
   }
@@ -32,93 +31,94 @@ $screen-ratio: 1vw;
 
 .stockContainer {
   background-color: $background-color-light;
-  // width: calc($screen-ratio*60);
-  padding: calc(($screen-ratio * 1.6));
-  border-radius: calc($screen-ratio * 0.5);
+  // width: calc(var(--screen-ratio)*60);
+  padding: calc((var(--screen-ratio) * 1.6));
+  border-radius: calc(var(--screen-ratio) * 0.5);
 
   .stockDetails {
     display: flex;
     align-items: center;
-    gap: calc($screen-ratio * 0.4);
-    padding-bottom: calc($screen-ratio * 2.2);
+    gap: calc(var(--screen-ratio) * 0.4);
+    padding-bottom: calc(var(--screen-ratio) * 2.2);
     .stockLogo {
-      height: calc($screen-ratio * 2);
+      height: calc(var(--screen-ratio) * 2);
     }
     .stockName {
       font-weight: $font-weight-semibold;
-      font-size: calc($screen-ratio * 1.6);
-      padding-right: calc($screen-ratio * 0.5);
+      font-size: calc(var(--screen-ratio) * 1.6);
+      padding-right: calc(var(--screen-ratio) * 0.5);
     }
     .stockShortName {
       font-weight: $font-weight-semibold;
-      font-size: calc($screen-ratio * 1);
+      font-size: calc(var(--screen-ratio) * 1);
       color: gray;
     }
     .stockRank {
       background-color: #808a9d;
       color: $text-color-white;
-      border-radius: calc($screen-ratio * 0.5);
-      margin-left: calc($screen-ratio * 2.2);
+      border-radius: calc(var(--screen-ratio) * 0.5);
+      margin-left: calc(var(--screen-ratio) * 2.2);
+      font-size: calc(var(--screen-ratio)*1.1);
     }
   }
   .priceDetails {
     .usdPriceContainer {
       display: flex;
       align-items: center;
-      gap: calc($screen-ratio * 1);
+      gap: calc(var(--screen-ratio) * 1);
       .usdPrice {
         font-weight: $font-weight-semibold;
-        font-size: calc($screen-ratio * 2);
+        font-size: calc(var(--screen-ratio) * 2);
       }
       .percentangeChange {
         display: flex;
         align-items: center;
         background-color: #ebf9f4;
         color: #14b079;
-        font-size: calc($screen-ratio * 1.1);
-        margin-left: calc($screen-ratio * 2.2);
+        font-size: calc(var(--screen-ratio) * 1.1);
+        margin-left: calc(var(--screen-ratio) * 2.2);
         font-weight: $font-weight-medium;
-        padding: calc($screen-ratio * 0.2);
-        border-radius: calc($screen-ratio * 0.4);
+        padding: calc(var(--screen-ratio) * 0.2);
+        border-radius: calc(var(--screen-ratio) * 0.4);
       }
       .timeFormat {
         color: #768396;
-        font-size: calc($screen-ratio * 0.9);
+        font-size: calc(var(--screen-ratio) * 0.9);
         font-weight: $font-weight-medium;
       }
     }
     .inrPrice {
       font-weight: $font-weight-medium;
-      font-size: calc($screen-ratio * 1.1);
-      padding-bottom: calc($screen-ratio * 1.5);
+      font-size: calc(var(--screen-ratio) * 1.1);
+      padding-bottom: calc(var(--screen-ratio) * 1.5);
     }
   }
   .chartLegendContainer {
     display: flex;
     justify-content: space-between;
-    width: calc($screen-ratio * 60);
+    width: calc(var(--screen-ratio) * 60);
     border-top: 1px solid #dee1e6;
-    padding-top: calc($screen-ratio * 1.5);
-    padding-bottom: calc($screen-ratio * 2.4);
+    padding-top: calc(var(--screen-ratio) * 1.5);
+    padding-bottom: calc(var(--screen-ratio) * 2.4);
     .chartLegend {
       font-weight: $font-weight-semibold;
-      font-size: calc($screen-ratio * 1.2);
+      font-size: calc(var(--screen-ratio) * 1.2);
     }
     .chartDayOptions {
       display: flex;
-      gap: calc($screen-ratio * 0.5);
+      gap: calc(var(--screen-ratio) * 0.5);
       .chartDayOptionsButtonActive {
         background-color: #e2ecfe;
         color: #0141cf;
-        padding: calc($screen-ratio * 0.2) calc($screen-ratio * 0.6);
-        border-radius: calc($screen-ratio * 1);
+        padding: calc(var(--screen-ratio) * 0.2) calc(var(--screen-ratio) * 0.6);
+        border-radius: calc(var(--screen-ratio) * 1);
       }
       .chartDayOptionsButton {
-        padding: calc($screen-ratio * 0.2) calc($screen-ratio * 0.6);
-        border-radius: calc($screen-ratio * 1);
+        padding: calc(var(--screen-ratio) * 0.2) calc(var(--screen-ratio) * 0.6);
+        border-radius: calc(var(--screen-ratio) * 1);
         color: #5d667b;
         font-weight: $font-weight-medium;
-        font-size: calc($screen-ratio * 1);
+        font-size: calc(var(--screen-ratio) * 1);
       }
       .chartDayOptionsButton:hover {
         background-color: #e2ecfe;
@@ -128,8 +128,12 @@ $screen-ratio: 1vw;
     }
   }
   .chart {
-    height: calc($screen-ratio * 18);
-    width: calc($screen-ratio * 60);
+    height: calc(var(--screen-ratio) * 18);
+    width: calc(var(--screen-ratio) * 60);
     overflow-y: hidden;
   }
 }
+
+
+
+

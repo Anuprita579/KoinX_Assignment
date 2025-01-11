@@ -1,32 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-$screen-ratio: 1vw;
 @import "../../theme.scss";
 
 .outerContainer {
   display: flex;
   flex-direction: column;
-  padding: calc($screen-ratio * 1.6);
-  gap: calc($screen-ratio * 2.6);
+  padding: calc(var(--screen-ratio) * 1.6);
+  gap: calc(var(--screen-ratio) * 2.6);
   background-color: #fff;
 
   .title {
-    font-size: calc($screen-ratio * 1.6);
+    font-size: calc(var(--screen-ratio) * 1.6);
     font-weight: $font-weight-semibold;
   }
 
   .performanceDetailsBox {
     display: flex;
     flex-direction: column;
-    gap: calc($screen-ratio * 1.1);
+    gap: calc(var(--screen-ratio) * 1.1);
   }
 
   .fundamentalContainer {
     display: flex;
     flex-direction: column;
-    gap: calc($screen-ratio * 1.1);
+    gap: calc(var(--screen-ratio) * 1.1);
 
     .fundamentalTitle {
-      font-size: calc($screen-ratio * 1.251);
+      font-size: calc(var(--screen-ratio) * 1.251);
     }
     .tooltipStyle{
       padding: 0 !important;
@@ -41,7 +40,7 @@ $screen-ratio: 1vw;
 
     .statsDetailsBox {
       display: flex;
-      gap: calc($screen-ratio * 6);
+      gap: calc(var(--screen-ratio) * 6);
 
       .statsBox {
         flex: 1;
@@ -55,20 +54,20 @@ $screen-ratio: 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: calc($screen-ratio * 2.5);
+  gap: calc(var(--screen-ratio) * 2.5);
 
   .lowBox {
     display: flex;
     flex-direction: column;
-    gap: calc($screen-ratio * 0.7);
+    gap: calc(var(--screen-ratio) * 0.7);
 
     .text {
-      font-size: calc($screen-ratio * 1);
+      font-size: calc(var(--screen-ratio) * 1);
       font-weight: $font-weight-semibold;
     }
 
     .value {
-      font-size: calc($screen-ratio * 1);
+      font-size: calc(var(--screen-ratio) * 1);
       font-weight: $font-weight-medium;
     }
   }
@@ -79,9 +78,9 @@ $screen-ratio: 1vw;
   justify-content: space-between;
   align-items: center;
   font-weight: $font-weight-medium;
-  font-size: calc($screen-ratio * 0.97);
-  //   padding: calc($screen-ratio * 1.1) 0;
-  height: calc($screen-ratio * 4.9);
+  font-size: calc(var(--screen-ratio) * 0.97);
+  //   padding: calc(var(--screen-ratio) * 1.1) 0;
+  height: calc(var(--screen-ratio) * 4.9);
   border-bottom: 1px solid #d3e0e6;
 
   .label {
@@ -91,14 +90,14 @@ $screen-ratio: 1vw;
   .valueBox {
     display: flex;
     flex-direction: column;
-    gap: calc($screen-ratio * 0.3);
+    gap: calc(var(--screen-ratio) * 0.3);
 
     .value {
       color: #111827;
       font-weight: $font-weight-semibold;
 
       span {
-        padding-left: calc($screen-ratio * 0.5);
+        padding-left: calc(var(--screen-ratio) * 0.5);
       }
 
       .profit {
@@ -110,7 +109,7 @@ $screen-ratio: 1vw;
     }
 
     .dateSection {
-      font-size: calc($screen-ratio * 0.76);
+      font-size: calc(var(--screen-ratio) * 0.76);
     }
   }
 }
