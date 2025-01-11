@@ -1,10 +1,13 @@
 import React from "react";
-import styles from "./styles.module.scss";
+//Assets
 import profileImg1 from "../../assets/profile-img-1.png";
 import profileImg2 from "../../assets/profile-img-2.png";
 import profileImg3 from "../../assets/profile-img-3.png";
+//Constant
 import { teamDetails } from "../../utils/constant/constant";
+//Context
 import { useScroll } from "../../utils/context/ScrollContext";
+import styles from "./styles.module.scss";
 
 const imageMapping = {
   0: profileImg1,

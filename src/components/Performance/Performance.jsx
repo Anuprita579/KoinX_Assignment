@@ -1,9 +1,12 @@
 import React from "react";
-import styles from "./styles.module.scss";
+//Common Compoents
 import ToolTipComponent from "../../commonComponents/ToolTipComponent";
 import FixedProgressBar from "../../commonComponents/FixedProgressBar";
-import InfoIcon from "@mui/icons-material/Info";
+//Constant
 import { useScroll } from "../../utils/context/ScrollContext";
+//MUI Icons
+import InfoIcon from "@mui/icons-material/Info";
+import styles from "./styles.module.scss";
 
 const Trend = (props) => {
   const { low, low_text, high, high_text, value, maxValue } = props;

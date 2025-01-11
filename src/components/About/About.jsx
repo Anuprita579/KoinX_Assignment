@@ -1,10 +1,12 @@
-import React, { Fragment } from "react";
-import styles from "./styles.module.scss";
-
+import React from "react";
+//Common Component
+import ButtonComponent from "../../commonComponents/ButtonComponent";
+//Assets
 import aboutImg1 from "../../assets/about-img-1.png";
 import aboutImg2 from "../../assets/about-img-2.png";
+//Constants
 import { aboutDetails } from "../../utils/constant/constant";
-import ButtonComponent from "../../commonComponents/ButtonComponent";
+import styles from "./styles.module.scss";
 
 const imageMapping = {
   0: aboutImg1,
@@ -13,7 +15,7 @@ const imageMapping = {
 
 const AboutCard = (props) => {
   const { title, description, cards, index } = props;
-  
+
   return (
     <div className={styles.aboutCard}>
       <p className={styles.title}>{title}</p>

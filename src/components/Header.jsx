@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { useLocation, Link } from "react-router-dom";
-//useContext
-// import { useLoginState } from '../utils/LoginStateContext';
+import { Link } from "react-router-dom";
 //Common Components
 import ButtonComponent from "../commonComponents/ButtonComponent";
 //Assets
 import Logo from "../assets/Logo.png";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-//Styles
+//MUI Icons
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
 import styles from "./styles.module.scss";
 
 const Header = () => {
@@ -30,7 +28,9 @@ const Header = () => {
         {/* Hamburger Icon */}
         <div className={styles.hamburger} onClick={toggleMenu}>
           {isMenuOpen ? (
-            <div className={styles.closeIcon}>< CloseIcon /></div> 
+            <div className={styles.closeIcon}>
+              <CloseIcon />
+            </div>
           ) : (
             <div className={styles.hamburgerIcon}>
               <MenuIcon />

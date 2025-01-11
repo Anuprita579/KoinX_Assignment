@@ -1,5 +1,7 @@
 import React from "react";
+//Common Component
 import ToolTipComponent from "../../commonComponents/ToolTipComponent";
+//MUI Icons
 import InfoIcon from "@mui/icons-material/Info";
 import styles from "./styles.module.scss";
 
@@ -22,11 +24,20 @@ const AnalystEstimate = () => {
         {/* Right section */}
         <div className={styles.progressSection}>
           <p className={styles.buyStatus}>Buy</p>
-          <div className={styles.buyStatusBox}> <div className={styles.buyPercent}></div>76%</div>
+          <div className={styles.buyStatusBox}>
+            {" "}
+            <div className={styles.buyPercent}></div>76%
+          </div>
           <p className={styles.buyStatus}>Hold</p>
-          <div className={styles.buyStatusBox}> <div className={styles.holdPercent}></div>8%</div>
+          <div className={styles.buyStatusBox}>
+            {" "}
+            <div className={styles.holdPercent}></div>8%
+          </div>
           <p className={styles.buyStatus}>Sell</p>
-          <div className={styles.buyStatusBox}> <div className={styles.sellPercent}></div>16%</div>
+          <div className={styles.buyStatusBox}>
+            {" "}
+            <div className={styles.sellPercent}></div>16%
+          </div>
         </div>
       </div>
     </div>

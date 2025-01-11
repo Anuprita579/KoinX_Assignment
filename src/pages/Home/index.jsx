@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
-import styles from "./styles.module.scss";
+//Axios
+import axios from "axios";
+//Common Components
+import TabbedComponent from "../../commonComponents/TabbedComponent";
+//Components
 import HomePath from "./HomePath";
 import StockGraph from "./StockGraph";
-import TabbedComponent from "../../commonComponents/TabbedComponent";
 import Performance from "../../components/Performance/Performance";
 import Footer from "../../components/Footer/Footer";
 import TrendingCoins from "../../components/TrendingCoins/TrendingCoins";
@@ -11,7 +14,7 @@ import GetStarted from "../../components/GetStarted/GetStarted";
 import TeamInfo from "../../components/TeamInfo/TeamInfo";
 import About from "../../components/About/About";
 import Tokenomics from "../../components/Tokenomics/Tokenomics";
-import axios from "axios";
+import styles from "./styles.module.scss";
 
 const tabsList = [
   "Overview",

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import Logo from "../../assets/bitcoinLogo.png";
-import ButtonComponent from "../../commonComponents/ButtonComponent";
-import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
-import styles from "./styles.module.scss";
+//Axios
 import axios from "axios";
+//Common Components
+import ButtonComponent from "../../commonComponents/ButtonComponent";
 import ChartComponent from "../../commonComponents/ChartComponent";
+//MUI Icons
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+//Assets
+import Logo from "../../assets/bitcoinLogo.png";
+import styles from "./styles.module.scss";
 
 const stocks = {
   Bitcoin: {
@@ -21,8 +25,6 @@ const stocks = {
 
 const StockGraph = () => {
   const [graph, setGraph] = useState(null);
-  console.log(process.env.REACT_APP_API);
-  console.log(process.env);
   const fetchGraphData = async () => {
     try {
       const response = await axios.get(

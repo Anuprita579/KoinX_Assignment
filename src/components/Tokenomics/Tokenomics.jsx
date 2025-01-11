@@ -1,7 +1,9 @@
 import React from "react";
-import styles from "./styles.module.scss";
-import DonutChart from "./DonutChart";
+//Context
 import { useScroll } from "../../utils/context/ScrollContext";
+//Import
+import DonutChart from "./DonutChart";
+import styles from "./styles.module.scss";
 
 const Tokenomics = () => {
   const { sectionRefs } = useScroll();
@@ -9,7 +11,7 @@ const Tokenomics = () => {
     <div className={styles.tokenomicsContainer} ref={sectionRefs.Tokenomics}>
       <p className={styles.heading}>Tokenomics</p>
       <p className={styles.title}>Initial Distribution</p>
-      {/* <DonutChart /> */}
+      <DonutChart />
       <p className={styles.subText}>
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
         vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum

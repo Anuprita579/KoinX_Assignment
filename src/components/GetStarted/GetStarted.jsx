@@ -1,4 +1,5 @@
 import React from "react";
+//Assets
 import getStartedImg from "../../assets/getStarted.png";
 import styles from "./styles.module.scss";
 

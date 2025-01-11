@@ -1,8 +1,10 @@
-import React from 'react'
-import KeyEvents from './KeyEvents'
+import React from "react";
+//Context
+import { useScroll } from "../../utils/context/ScrollContext";
+//Import
+import KeyEvents from "./KeyEvents";
+import AnalystEstimate from "./AnalystEstimate";
 import styles from "./styles.module.scss";
-import AnalystEstimate from './AnalystEstimate';
-import { useScroll } from '../../utils/context/ScrollContext';
 
 const Sentiment = () => {
   const { sectionRefs } = useScroll();
@@ -12,7 +14,7 @@ const Sentiment = () => {
       <KeyEvents />
       <AnalystEstimate />
     </div>
-  )
-}
+  );
+};
 
-export default Sentiment
+export default Sentiment;

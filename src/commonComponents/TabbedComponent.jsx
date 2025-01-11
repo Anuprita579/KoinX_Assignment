@@ -1,8 +1,8 @@
 import * as React from "react";
-import Tabs from "@mui/material/Tabs";
-import Tab from "@mui/material/Tab";
-import Box from "@mui/material/Box";
-import { useScroll } from "../utils/context/ScrollContext"; 
+//MUI Components
+import { Tabs, Tab, Box } from "@mui/material";
+//Context
+import { useScroll } from "../utils/context/ScrollContext";
 
 function a11yProps(index) {
   return {
@@ -30,7 +30,7 @@ const TabbedComponent = (props) => {
           aria-label="basic tabs example"
         >
           {tabsList.map((tabElement, idx) => (
-            <Tab label={tabElement} {...a11yProps(idx)} />
+            <Tab key={idx} label={tabElement} {...a11yProps(idx)} />
           ))}
         </Tabs>
       </Box>

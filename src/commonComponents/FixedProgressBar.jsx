@@ -1,9 +1,11 @@
 import React from "react";
+//MUI Components
 import { Box, Tooltip, Typography } from "@mui/material";
+//Import
 import "./commonStyles.scss";
 
 const FixedProgressBar = ({ value = 0, maxValue = 100000 }) => {
-  const percentage = Math.min((value / maxValue) * 100, 100); // Ensure percentage doesn't exceed 100
+  const percentage = Math.min((value / maxValue) * 100, 100);
 
   return (
     <Box className="progressBar">
@@ -36,7 +38,7 @@ const FixedProgressBar = ({ value = 0, maxValue = 100000 }) => {
                 viewBox="0 0 100 100"
                 style={{
                   fill: "currentColor",
-                  color: "black", // Arrow color
+                  color: "black",
                 }}
                 className="arrow"
               >

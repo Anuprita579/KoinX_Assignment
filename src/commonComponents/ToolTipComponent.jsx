@@ -13,8 +13,8 @@ const ToolTipComponent = ({
   style,
   backgroundColor,
   color,
-  disabled=false,
-  placement='bottom',
+  disabled = false,
+  placement = "bottom",
 }) => {
   return (
     <Tooltip

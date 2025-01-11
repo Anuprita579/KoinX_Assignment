@@ -1,9 +1,10 @@
-import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React from "react";
+import { Link, useNavigate } from "react-router-dom";
 //MUI ICONS
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
-import KeyboardDoubleArrowRightIcon from '@mui/icons-material/KeyboardDoubleArrowRight';
-import './commonStyles.scss';
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import KeyboardDoubleArrowRightIcon from "@mui/icons-material/KeyboardDoubleArrowRight";
+//Import
+import "./commonStyles.scss";
 
 const BreadCrumbs = ({ paths, color }) => {
   const navigate = useNavigate();
@@ -19,33 +20,32 @@ const BreadCrumbs = ({ paths, color }) => {
     <nav aria-label="breadcrumb">
       <ol className="breadcrumbs">
         {paths.map((path, index) => (
-          <>
-            <li key={index} className="breadcrumb-item">
-              {path.customOnClick ? (
-                <span
-                  onClick={() => handleClick(path)}
-                  style={{ color, cursor: 'pointer' }}
-                >
-                  {path.label}
-                </span>
-              ) : (
-                <Link to={path.url} style={{ color }}>
-                  {path.label}
-                </Link>
-              )}
-              {index < paths.length - 1 && (
-                <KeyboardDoubleArrowRightIcon style={{ fill: color }} className="breadcrumb-icon" fontSize='small'/>
-                
-              )}
-            </li>
-          </>
+          <li key={index} className="breadcrumb-item">
+            {path.customOnClick ? (
+              <span
+                onClick={() => handleClick(path)}
+                style={{ color, cursor: "pointer" }}
+              >
+                {path.label}
+              </span>
+            ) : (
+              <Link to={path.url} style={{ color }}>
+                {path.label}
+              </Link>
+            )}
+            {index < paths.length - 1 && (
+              <KeyboardDoubleArrowRightIcon
+                style={{ fill: color }}
+                className="breadcrumb-icon"
+                fontSize="small"
+              />
+            )}
+          </li>
         ))}
       </ol>
     </nav>
   );
 };
-
-
 
 export default BreadCrumbs;
 

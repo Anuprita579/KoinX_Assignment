@@ -1,13 +1,16 @@
 import React from "react";
+//Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import styles from "./styles.module.scss";
+//Common Components
+import ToolTipComponent from "../../commonComponents/ToolTipComponent";
+//MUI Icons
 import ArticleIcon from "@mui/icons-material/Article";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
-import ToolTipComponent from "../../commonComponents/ToolTipComponent";
 import InfoIcon from "@mui/icons-material/Info";
+import styles from "./styles.module.scss";
 
 const EventCard = ({ icon, index }) => {
   const bgColor = ["#E8F4FD", "#EBF9F4"];
