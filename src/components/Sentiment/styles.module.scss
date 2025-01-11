@@ -42,6 +42,75 @@ $screen-ratio: 1vw;
     }
   }
 }
+.analystEstimate{
+    .subheading {
+        font-weight: $font-weight-semibold;
+        font-size: calc($screen-ratio * 1.2);
+        color: #44475b;
+        padding-bottom: calc($screen-ratio*1.1);
+        padding-top: calc($screen-ratio*2.2);
+        .tooltipStyle {
+          padding: 0 !important;
+          .infoicon {
+            color: #abb9bf;
+          }
+        }
+        .tooltipStyle:hover {
+          background-color: transparent;
+        }
+      }
+    .analystEstimateContainer{
+        display: flex;
+        align-items: center;
+        gap: calc($screen-ratio*2.5);
+        .analysisPercentage{
+            display: flex;
+            align-items: center;
+            padding: calc($screen-ratio*3);
+            border-radius: 50%;
+            color: #0FBA83;
+            font-weight: $font-weight-semibold;
+            font-size: calc($screen-ratio*2);
+            background-color: #EBF9F4;
+            .percentIcon{
+                font-size: calc($screen-ratio*1);
+            }
+        }
+        .progressSection{
+            display: grid;
+            grid-template-columns: 3rem 1fr;
+            gap: calc($screen-ratio*0.75);
+            .buyStatus{
+                font-weight: $font-weight-medium;
+                color: #7C7E8C;
+            }
+            .buyStatusBox{
+                display: flex;
+                align-items: center;
+                gap: calc($screen-ratio*0.5);
+                .buyPercent{
+                    width: calc($screen-ratio*24);
+                    height: 8px;
+                    background-color: #0FBA83;
+                    border-radius: calc($screen-ratio*0.5);
+                }
+                .holdPercent{
+                    width: calc($screen-ratio*2);
+                    height: 8px;
+                    background-color: #C7C8CE;
+                    border-radius: calc($screen-ratio*0.5);
+                }
+                .sellPercent{
+                    width: calc($screen-ratio*4.5);
+                    height: 8px;
+                    background-color: #F7324C;
+                    border-radius: calc($screen-ratio*0.5);
+                }
+            }
+            
+        }
+    }
+}
 .sentiment {
   background-color: $background-color-light;
   padding: calc($screen-ratio * 2.2);
