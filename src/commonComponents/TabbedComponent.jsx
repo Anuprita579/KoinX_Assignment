@@ -2,6 +2,7 @@ import * as React from "react";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
+import { useScroll } from "../utils/context/ScrollContext"; 
 
 function a11yProps(index) {
   return {
@@ -13,9 +14,11 @@ function a11yProps(index) {
 const TabbedComponent = (props) => {
   const { tabsList } = props;
   const [value, setValue] = React.useState(0);
+  const { scrollToSection } = useScroll(); // Get scrollToSection from context
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+    scrollToSection(tabsList[newValue]); // Scroll to the section corresponding to the tab
   };
 
   return (

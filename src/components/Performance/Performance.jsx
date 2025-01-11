@@ -3,6 +3,7 @@ import styles from "./styles.module.scss";
 import ToolTipComponent from "../../commonComponents/ToolTipComponent";
 import FixedProgressBar from "../../commonComponents/FixedProgressBar";
 import InfoIcon from '@mui/icons-material/Info';
+import { useScroll } from "../../utils/context/ScrollContext";
 
 const Trend = (props) => {
   const { low, low_text, high, high_text, value, maxValue } = props;
@@ -94,6 +95,8 @@ const Performance = () => {
     },
   ];
 
+  const { sectionRefs } = useScroll();
+
   return (
     <div className={styles.outerContainer}>
       <p className={styles.title}>Performance</p>
@@ -104,7 +107,7 @@ const Performance = () => {
         ))}
       </div>
 
-      <div className={styles.fundamentalContainer}>
+      <div className={styles.fundamentalContainer} ref={sectionRefs.Fundamentals}>
         <p className={`${styles.title} ${styles.fundamentalTitle}`}>
           Fundamentals <ToolTipComponent title="Fundamentals" children={<InfoIcon className={styles.infoicon}/>} className={styles.tooltipStyle}/>
         </p>
