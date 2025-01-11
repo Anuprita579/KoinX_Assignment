@@ -4,12 +4,12 @@ import DonutChart from "./DonutChart";
 import { useScroll } from "../../utils/context/ScrollContext";
 
 const Tokenomics = () => {
-    const { sectionRefs } = useScroll();
+  const { sectionRefs } = useScroll();
   return (
     <div className={styles.tokenomicsContainer} ref={sectionRefs.Tokenomics}>
       <p className={styles.heading}>Tokenomics</p>
       <p className={styles.title}>Initial Distribution</p>
-      <DonutChart />
+      {/* <DonutChart /> */}
       <p className={styles.subText}>
         Lorem ipsum dolor sit amet consectetur. Cras aliquet tristique ornare
         vestibulum nunc dignissim vel consequat. Leo etiam nascetur bibendum

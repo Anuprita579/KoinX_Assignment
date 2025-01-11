@@ -8,7 +8,7 @@
 
 .teamCard {
   display: flex;
-  gap: calc(var(--screen-ratio) * 1.2);;
+  gap: calc(var(--screen-ratio) * 1.2);
   align-items: center;
   background-color: #e8f4fd;
   padding: calc(var(--screen-ratio) * 0.76) calc(var(--screen-ratio) * 1.8);
@@ -63,5 +63,11 @@
     font-size: calc(var(--screen-ratio) * 1.1);
     font-weight: $font-weight-medium;
     color: #3e424a;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .teamCard {
+    flex-direction: column;
   }
 }

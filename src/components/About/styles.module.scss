@@ -24,8 +24,7 @@
     background-color: rgba(201, 207, 221, 0.6);
   }
 
-
-  .cardsContainer{
+  .cardsContainer {
     display: flex;
     gap: calc(var(--screen-ratio));
 
@@ -33,45 +32,45 @@
       border-radius: calc(var(--screen-ratio) * 0.56);
       flex: 1;
       background: linear-gradient(135deg, #79f1a4 0%, #0e5cad 100%);
-      padding: var(--screen-ratio) calc(var(--screen-ratio) * 2) var(--screen-ratio) var(--screen-ratio);
+      padding: var(--screen-ratio) calc(var(--screen-ratio) * 2)
+        var(--screen-ratio) var(--screen-ratio);
       display: flex;
       gap: calc(var(--screen-ratio) * 2.9);
       align-items: center;
-  
+
       &.orangeBkg {
         background: linear-gradient(135.73deg, #ff9865 0%, #ef3031 110.55%);
       }
-  
+
       .aboutImg {
         width: calc(var(--screen-ratio) * 8.8);
         height: calc(var(--screen-ratio) * 8.8);
         object-fit: cover;
         border-radius: calc(var(--screen-ratio) * 0.56);
       }
-  
+
       .rightSection {
         display: flex;
         flex-direction: column;
         gap: calc(var(--screen-ratio) * 1.1);
-  
+
         .cardTitle {
           font-size: calc(var(--screen-ratio) * 1.4);
           font-weight: $font-weight-bold;
           color: #fff;
         }
-  
+
         .cta {
           background-color: #fff;
           padding: calc(var(--screen-ratio) * 0.5) var(--screen-ratio);
           color: #0f1629;
-          font-size:  var(--screen-ratio);
+          font-size: var(--screen-ratio);
           font-weight: $font-weight-semibold;
           width: fit-content;
         }
       }
     }
   }
-
 }
 
 .aboutContainer {
@@ -85,5 +84,11 @@
   .heading {
     font-size: calc(var(--screen-ratio) * 1.66);
     font-weight: $font-weight-semibold;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cardsContainer {
+    flex-direction: column;
   }
 }

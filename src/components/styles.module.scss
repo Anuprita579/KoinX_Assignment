@@ -55,4 +55,43 @@ a {
       text-transform: capitalize;
     }
   }
+  .hamburger {
+    display: none;
+    cursor: pointer;
+
+    .hamburgerIcon {
+      margin-right: calc((var(--screen-ratio)) * 1.5);
+    }
+
+    .closeIcon {
+      margin-right: calc((var(--screen-ratio)) * 1.5);
+      color: #333;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    .headerRight {
+      display: none;
+      flex-direction: column;
+      gap: calc((var(--screen-ratio)) * 0.5);
+      position: absolute;
+      top: calc((var(--screen-ratio)) * 4.5);
+      right: calc((var(--screen-ratio)) * 1.2);
+      background-color: $background-color-light;
+      padding: calc((var(--screen-ratio)) * 1);
+      border: 1px solid #ddd;
+      border-radius: calc((var(--screen-ratio)) * 0.5);
+    }
+
+    .headerRight.showMenu {
+      display: flex;
+    }
+
+    .hamburger {
+      display: block;
+    }
+  }
+
 }

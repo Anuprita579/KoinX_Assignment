@@ -9,16 +9,16 @@
   border: 1px solid #e3e3e3;
   border-radius: 10px;
   background-color: #fff;
-  min-width: calc(var(--screen-ratio)*16);
+  min-width: calc(var(--screen-ratio) * 16);
 
   .price {
     font-size: calc(var(--screen-ratio) * 1.4);
     font-weight: $font-weight-medium;
     color: #171717;
   }
-  .graph{
-    height: calc(var(--screen-ratio)*4);
-    width: calc(var(--screen-ratio)*13);
+  .graph {
+    height: calc(var(--screen-ratio) * 4);
+    width: calc(var(--screen-ratio) * 13);
   }
 }
 
@@ -27,14 +27,20 @@
   flex-direction: column;
   gap: calc(var(--screen-ratio) * 1.4);
   background-color: $background-color-light;
-  padding: calc(var(--screen-ratio)*4.5);
-  .title{
+  padding: calc(var(--screen-ratio) * 4.5);
+  .title {
     font-weight: $font-weight-semibold;
-    font-size: calc(var(--screen-ratio)*1.7);
+    font-size: calc(var(--screen-ratio) * 1.7);
   }
 
   .cardContainer {
     display: flex;
     gap: calc(var(--screen-ratio) * 0.7);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cryptoCard {
+    min-width: calc(var(--screen-ratio) * 5);
   }
 }

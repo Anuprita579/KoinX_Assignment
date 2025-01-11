@@ -1,11 +1,12 @@
 import React from "react";
 import { Box, Tooltip, Typography } from "@mui/material";
+import "./commonStyles.scss";
 
 const FixedProgressBar = ({ value = 0, maxValue = 100000 }) => {
   const percentage = Math.min((value / maxValue) * 100, 100); // Ensure percentage doesn't exceed 100
 
   return (
-    <Box sx={{ position: "relative", width: "70%" }}>
+    <Box className="progressBar">
       {/* Progress Bar */}
       <Box
         sx={{
@@ -34,11 +35,10 @@ const FixedProgressBar = ({ value = 0, maxValue = 100000 }) => {
               <svg
                 viewBox="0 0 100 100"
                 style={{
-                  marginTop: "16px",
-                  width: "12px",
                   fill: "currentColor",
                   color: "black", // Arrow color
                 }}
+                className="arrow"
               >
                 <polygon points="0,100 50,0 100,100" />
               </svg>
@@ -48,11 +48,7 @@ const FixedProgressBar = ({ value = 0, maxValue = 100000 }) => {
       </Box>
 
       {/* Display Value */}
-      {value > 0 && (
-        <Typography align="center" sx={{ marginTop: "10px", color: "#44475B" }}>
-          ${value.toFixed(2)}
-        </Typography>
-      )}
+      {value > 0 && <div className="displayName">${value.toFixed(2)}</div>}
     </Box>
   );
 };

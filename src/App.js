@@ -12,7 +12,6 @@ const AppContent = () => {
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
-      {/* <FooterLayout /> */}
     </>
   );
 };

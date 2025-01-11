@@ -26,6 +26,7 @@
 
   .priceChange {
     padding: calc(var(--screen-ratio) * 0.2) calc(var(--screen-ratio) * 0.5);
+    font-size: calc(var(--screen-ratio) * 0.83);
 
     &.profit {
       color: #32be88;

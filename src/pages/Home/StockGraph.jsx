@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Logo from "../../assets/bitcoinLogo.png";
 import ButtonComponent from "../../commonComponents/ButtonComponent";
-import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import styles from "./styles.module.scss";
 import axios from "axios";
 import ChartComponent from "../../commonComponents/ChartComponent";
@@ -17,7 +17,6 @@ const stocks = {
     logo: Logo,
   },
 };
-
 
 const StockGraph = () => {
   const [graph, setGraph] = useState(null);
@@ -49,23 +48,40 @@ const StockGraph = () => {
         />
         <p className={styles.stockName}>{stocks.Bitcoin.name}</p>
         <p className={styles.stockShortName}>{stocks.Bitcoin.shortName}</p>
-        <ButtonComponent children={"Rank#" + stocks.Bitcoin.rank} className={styles.stockRank}/>
+        <ButtonComponent
+          children={"Rank#" + stocks.Bitcoin.rank}
+          className={styles.stockRank}
+        />
       </div>
 
       <div className={styles.priceDetails}>
         <div className={styles.usdPriceContainer}>
-          <p className={styles.usdPrice}>$ {graph && graph?.usd.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
-          <p className={styles.percentangeChange}><ArrowDropUpIcon /> 2.51%</p>
+          <p className={styles.usdPrice}>
+            ${" "}
+            {graph &&
+              graph?.usd.toLocaleString("en-US", {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}
+          </p>
+          <p className={styles.percentangeChange}>
+            <ArrowDropUpIcon /> 2.51%
+          </p>
           <p className={styles.timeFormat}> (24H) </p>
         </div>
-        
-        <p className={styles.inrPrice}>&#8377; {graph && graph?.inr.toLocaleString("en-US", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</p>
+
+        <p className={styles.inrPrice}>
+          &#8377;{" "}
+          {graph &&
+            graph?.inr.toLocaleString("en-US", {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
+        </p>
       </div>
 
       <div className={styles.chartLegendContainer}>
-        <div className={styles.chartLegend}>
-          Bitcoin Price Chart (USD)
-        </div>
+        <div className={styles.chartLegend}>Bitcoin Price Chart (USD)</div>
         <div className={styles.chartDayOptions}>
           <div className={styles.chartDayOptionsButton}>1H</div>
           <div className={styles.chartDayOptionsButton}>24H</div>

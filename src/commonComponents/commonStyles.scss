@@ -1,12 +1,40 @@
-.breadcrumbs{
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  .breadcrumb-item {
     display: flex;
     align-items: center;
-    list-style: none;
-    .breadcrumb-item{
-        display: flex;
-        align-items: center;
-        .breadcrumb-icon{
-            padding: 0 2px !important; 
-        }
+    .breadcrumb-icon {
+      padding: 0 2px !important;
     }
+  }
+}
+
+.arrow {
+  margin-top: calc(var(--screen-ratio) * 1.1);
+  width: calc(var(--screen-ratio) * 0.83);
+}
+
+.progressBar {
+  position: "relative";
+  width: "70%";
+
+  .displayName {
+    margin-top: calc(var(--screen-ratio) * 1.5);
+    color: #44475b;
+    text-align: center;
+    font-size: calc(var(--screen-ratio) * 1);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .progressBar {
+    width: 50%;
+
+    .displayName {
+      margin-top: calc(var(--screen-ratio) * 0.7);
+      font-size: calc(var(--screen-ratio) * 0.7);
+    }
+  }
 }

@@ -28,7 +28,7 @@ const index = () => {
       <div className={styles.mainPage}>
         <div className={styles.leftSection}>
           <HomePath />
-          <StockGraph />
+          {/* <StockGraph /> */}
           <TabbedComponent tabsList={tabsList} />
           <Performance />
           <Sentiment />
