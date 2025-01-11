@@ -1,4 +1,8 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
 import styles from "./styles.module.scss";
 import CryptoHeader from "../CryptoHeader/CryptoHeader";
 
@@ -16,43 +20,53 @@ const CryptoCard = (props) => {
     </div>
   );
 };
-const Footer = () => {
-  const coinsInfo = [
-    {
-      item: {
-        id: "usual",
-        coin_id: 51091,
-        name: "Usual",
-        symbol: "USUAL",
-        market_cap_rank: 286,
-        thumb:
-          "https://coin-images.coingecko.com/coins/images/51091/standard/USUAL.jpg?1730035787",
-        small:
-          "https://coin-images.coingecko.com/coins/images/51091/small/USUAL.jpg?1730035787",
-        large:
-          "https://coin-images.coingecko.com/coins/images/51091/large/USUAL.jpg?1730035787",
-        slug: "usual",
-        price_btc: 0.76006234406296450218,
-        score: 4,
-        data: {
-          price: 0.5879226287160986,
-          price_btc: "0.000006234406296450218",
-          price_change_percentage_24h: {
-            usd: -14.24236737908534,
-          },
-          sparkline: "https://www.coingecko.com/coins/51091/sparkline.svg",
-        },
-      },
-    },
-  ];
+const Footer = ({trendingData, }) => {
   return (
     <div className={styles.footerContainer}>
       <p className={styles.title}>You May Also Like</p>
 
       <div className={styles.cardContainer}>
-        {coinsInfo.map((coin, i) => (
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        className={styles.swiperContainer}
+        slidesPerView={4} 
+        spaceBetween={20}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          600: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        }}
+      >
+        {trendingData && trendingData.map((coin, i) => (
+          <SwiperSlide key={i} className={styles.swiperSlide}>
           <CryptoCard {...coin.item} />
+          </SwiperSlide>
         ))}
+        </Swiper>
+      </div>
+
+      <p className={styles.title}>Trending Coins</p>
+
+      <div className={styles.cardContainer}>
+      <Swiper
+        modules={[Navigation]}
+        navigation
+        className={styles.swiperContainer}
+        slidesPerView={4} 
+        spaceBetween={20}
+        breakpoints={{
+          320: { slidesPerView: 1 },
+          600: { slidesPerView: 2 },
+          1024: { slidesPerView: 4 },
+        }}
+      >
+        {trendingData && trendingData.map((coin, i) => (
+          <SwiperSlide key={i} className={styles.swiperSlide}>
+          <CryptoCard {...coin.item} />
+          </SwiperSlide>
+        ))}
+        </Swiper>
       </div>
     </div>
   );

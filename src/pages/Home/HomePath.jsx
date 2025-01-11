@@ -4,7 +4,7 @@ import BreadCrumbs from "../../commonComponents/BreadCrumbs";
 const HomePath = () => {
   const paths = [
     { label: "Crytocurrencies", url: "/" },
-    { label: "Bitcoin", url: "/products" },
+    { label: "Bitcoin", url: "/" },
   ];
   return (
     <div>

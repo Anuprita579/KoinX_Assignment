@@ -5,6 +5,7 @@ import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import styles from "./styles.module.scss";
 import axios from "axios";
 import ChartComponent from "../../commonComponents/ChartComponent";
+
 const stocks = {
   Bitcoin: {
     name: "Bitcoin",
@@ -20,19 +21,25 @@ const stocks = {
 
 const StockGraph = () => {
   const [graph, setGraph] = useState(null);
+  console.log(process.env.REACT_APP_API);
+  console.log(process.env);
   const fetchGraphData = async () => {
-    //   const response = await axios.get(
-    //     "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true%27?x_cg_demo_api_key=CG-JLUiV4oYV3siBiSKEV4HEZ9h"
-    //   );
-    //   if (response.data) {
-    // console.log({ respdata: response.data });
-    const responseObj = {
-      inr: 8057078,
-      usd: 93528,
-    };
-    setGraph(responseObj);
-    // setGraph(response.data);
-    //   }
+    try {
+      const response = await axios.get(
+        `https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr%2Cusd&include_24hr_change=true%27?x_cg_demo_api_key=${process.env.REACT_APP_API}`
+      );
+      if (response.data) {
+        // console.log({ respdata: response.data?.bitcoin });
+        setGraph(response.data.bitcoin);
+      }
+      // const responseObj = {
+      //   inr: 8057078,
+      //   usd: 93528,
+      // };
+      // setGraph(responseObj);
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   useEffect(() => {

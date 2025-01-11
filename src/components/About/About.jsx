@@ -13,8 +13,7 @@ const imageMapping = {
 
 const AboutCard = (props) => {
   const { title, description, cards, index } = props;
-  console.log({ index });
-
+  
   return (
     <div className={styles.aboutCard}>
       <p className={styles.title}>{title}</p>
