@@ -9,6 +9,8 @@ import TrendingCoins from "../../components/TrendingCoins/TrendingCoins";
 import Sentiment from "../../components/Sentiment/Sentiment";
 import GetStarted from "../../components/GetStarted/GetStarted";
 import TeamInfo from "../../components/TeamInfo/TeamInfo";
+import About from "../../components/About/About";
+import Tokenomics from "../../components/Tokenomics/Tokenomics";
 
 const tabsList = [
   "Overview",
@@ -30,6 +32,8 @@ const index = () => {
           <TabbedComponent tabsList={tabsList} />
           <Performance />
           <Sentiment />
+          <About />
+          <Tokenomics />
           <TeamInfo />
         </div>
         <div className={styles.rightSection}>
