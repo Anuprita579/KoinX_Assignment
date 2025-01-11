@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$screen-ratio: 1vw;
+@import "../../theme.scss";
+
+.getStartedCard {
+  display: flex;
+  flex-direction: column;
+  gap: calc($screen-ratio * 1.4);
+  padding: calc($screen-ratio * 2.15) calc($screen-ratio * 3.4);
+  background-color: #0052fe;
+  border-radius: calc($screen-ratio * 0.56);
+  align-items: center;
+  color: #fff;
+
+  .heading {
+    font-size: calc($screen-ratio * 1.7);
+    font-weight: $font-weight-bold;
+    width: 63%;
+    text-align: center;
+  }
+
+  .description {
+    font-size: calc($screen-ratio * 0.97);
+    font-weight: $font-weight-medium;
+    color: #f2f2f2;
+  }
+
+  .getStartedImg {
+    width: 50%;
+    height: auto;
+  }
+
+  .cta {
+    background-color: #fff;
+    border-radius: calc($screen-ratio * 0.56);
+    padding: calc($screen-ratio * 0.7) calc($screen-ratio * 1.7);
+    font-size: calc($screen-ratio * 0.97);
+    font-weight: $font-weight-medium;
+    color: #0f1629;
+    border: 0;
+  }
+}
