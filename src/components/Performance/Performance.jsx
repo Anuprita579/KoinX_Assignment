@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import ToolTipComponent from "../../commonComponents/ToolTipComponent";
 import FixedProgressBar from "../../commonComponents/FixedProgressBar";
-import InfoIcon from '@mui/icons-material/Info';
+import InfoIcon from "@mui/icons-material/Info";
 import { useScroll } from "../../utils/context/ScrollContext";
 
 const Trend = (props) => {
@@ -60,14 +60,14 @@ const Performance = () => {
       high: "49,343.83",
       high_text: "Today’s High",
       value: 48637.83,
-      maxValue: 100000
+      maxValue: 100000,
     },
     {
       low: "16,930.22",
       low_text: "52W Low",
       high: "49,743.83",
       high_text: "52W High",
-      maxValue: 100000
+      maxValue: 100000,
     },
   ];
   const bitcoinStats = [
@@ -107,9 +107,17 @@ const Performance = () => {
         ))}
       </div>
 
-      <div className={styles.fundamentalContainer} ref={sectionRefs.Fundamentals}>
+      <div
+        className={styles.fundamentalContainer}
+        ref={sectionRefs.Fundamentals}
+      >
         <p className={`${styles.title} ${styles.fundamentalTitle}`}>
-          Fundamentals <ToolTipComponent title="Fundamentals" children={<InfoIcon className={styles.infoicon}/>} className={styles.tooltipStyle}/>
+          Fundamentals{" "}
+          <ToolTipComponent
+            title="Fundamentals"
+            children={<InfoIcon className={styles.infoicon} />}
+            className={styles.tooltipStyle}
+          />
         </p>
 
         <div className={styles.statsDetailsBox}>

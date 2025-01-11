@@ -6,6 +6,7 @@ import TabbedComponent from "../../commonComponents/TabbedComponent";
 import Performance from "../../components/Performance/Performance";
 import Footer from "../../components/Footer/Footer";
 import TrendingCoins from "../../components/TrendingCoins/TrendingCoins";
+import Sentiment from "../../components/Sentiment/Sentiment";
 
 const tabsList = [
   "Overview",
@@ -26,6 +27,7 @@ const index = () => {
           <StockGraph />
           <TabbedComponent tabsList={tabsList} />
           <Performance />
+          <Sentiment />
         </div>
         <div className={styles.rightSection}>
           <TrendingCoins />
