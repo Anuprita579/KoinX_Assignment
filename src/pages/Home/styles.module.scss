@@ -11,21 +11,106 @@ $screen-ratio: 1vw;
 }
 
 .stockContainer {
+  background-color: $background-color-light;
+  // width: calc($screen-ratio*60);
+  padding: calc(($screen-ratio*1.6));
+  border-radius: calc($screen-ratio*0.5);
+  
   .stockDetails {
     display: flex;
     align-items: center;
     gap: calc($screen-ratio * 0.4);
+    padding-bottom: calc($screen-ratio*2.2);
     .stockLogo {
       height: calc($screen-ratio * 2);
     }
     .stockName {
       font-weight: $font-weight-semibold;
-      font-size: large;
+      font-size: calc($screen-ratio*1.6);
+      padding-right: calc($screen-ratio*0.5);
     }
     .stockShortName {
       font-weight: $font-weight-semibold;
-      font-size: smaller;
+      font-size: calc($screen-ratio*1);
       color: gray;
     }
+    .stockRank{
+      background-color: #808A9D;
+      color: $text-color-white;
+      border-radius: calc($screen-ratio*0.5);
+      margin-left: calc($screen-ratio*2.2);
+    }
+  }
+  .priceDetails{
+    .usdPriceContainer{
+      display: flex;
+      align-items: center;
+      gap: calc($screen-ratio*1);
+      .usdPrice{
+        font-weight: $font-weight-semibold;
+        font-size: calc($screen-ratio*2);
+      }
+      .percentangeChange{
+        display: flex;
+        align-items: center;
+        background-color: #EBF9F4;
+        color: #14B079;
+        font-size: calc($screen-ratio*1.1);
+        margin-left: calc($screen-ratio*2.2);
+        font-weight: $font-weight-medium;
+        padding: calc($screen-ratio*0.2);
+        border-radius: calc($screen-ratio*0.4);
+      }
+      .timeFormat{
+        color: #768396;
+        font-size: calc($screen-ratio*0.9);
+        font-weight: $font-weight-medium;
+      }
+    }
+    .inrPrice{
+      font-weight: $font-weight-medium;
+      font-size: calc($screen-ratio*1.1);
+      padding-bottom: calc($screen-ratio*1.5);
+    }
+  }
+  .chartLegendContainer{
+    display: flex;
+    justify-content: space-between;
+    width: calc($screen-ratio*60);
+    border-top: 1px solid #DEE1E6;
+    padding-top: calc($screen-ratio*1.5);
+    padding-bottom: calc($screen-ratio*2.4);
+    .chartLegend{
+      font-weight: $font-weight-semibold;
+      font-size: calc($screen-ratio*1.2);
+    }
+    .chartDayOptions{
+      display: flex;
+      gap: calc($screen-ratio*0.5);
+      .chartDayOptionsButtonActive{
+        background-color: #E2ECFE;
+        color: #0141CF;
+        padding: calc($screen-ratio*0.2) calc($screen-ratio*0.6);
+        border-radius: calc($screen-ratio*1);
+      }
+      .chartDayOptionsButton{
+        padding: calc($screen-ratio*0.2) calc($screen-ratio*0.6);
+        border-radius: calc($screen-ratio*1);
+        color: #5D667B;
+        font-weight: $font-weight-medium;
+        font-size: calc($screen-ratio*1);
+      }
+      .chartDayOptionsButton:hover{
+        background-color: #E2ECFE;
+        color: #0141CF;
+        cursor: pointer;
+      }
+      
+    }
+  }
+  .chart{
+    height: calc($screen-ratio*18);
+    width: calc($screen-ratio*60);
+    overflow-y: hidden;
   }
 }
