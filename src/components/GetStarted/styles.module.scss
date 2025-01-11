@@ -7,6 +7,7 @@ $screen-ratio: 1vw;
   flex-direction: column;
   gap: calc($screen-ratio * 1.4);
   padding: calc($screen-ratio * 2.15) calc($screen-ratio * 3.4);
+  margin-top: calc($screen-ratio*3);
   background-color: #0052fe;
   border-radius: calc($screen-ratio * 0.56);
   align-items: center;

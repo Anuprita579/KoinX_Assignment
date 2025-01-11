@@ -9,7 +9,7 @@ export const ScrollProvider = ({ children }) => {
     "News Insights": useRef(null),
     Sentiments: useRef(null),
     Team: useRef(null),
-    Technicals: useRef(null),
+    "Technicals": useRef(null),
     Tokenomics: useRef(null),
   };
 
