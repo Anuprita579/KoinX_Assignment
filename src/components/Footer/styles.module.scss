@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$screen-ratio: 1vw;
+@import "../../theme.scss";
+
+.cryptoCard {
+  display: flex;
+  flex-direction: column;
+  gap: calc($screen-ratio * 0.84);
+  padding: calc($screen-ratio * 1.2);
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  background-color: #fff;
+  min-width: calc($screen-ratio*16);
+
+  .heading {
+    display: flex;
+    gap: calc($screen-ratio * 0.75);
+    align-items: center;
+
+    .icon {
+      width: calc($screen-ratio * 2.3);
+      height: calc($screen-ratio * 2.3);
+      border-radius: calc($screen-ratio * 1.15);
+    }
+
+    .symbol {
+      font-size: calc($screen-ratio * 1.1);
+      color: #202020;
+    }
+
+    .priceChange {
+      padding: calc($screen-ratio * 0.2) calc($screen-ratio * 0.5);
+
+      &.profit {
+        color: #32BE88;
+        background-color: #0AB27D0F;
+      }
+      &.loss {
+        color: #f7324c;
+        background-color: #EE68551A;
+      }
+    }
+  }
+
+  .price {
+    font-size: calc($screen-ratio * 1.4);
+    font-weight: $font-weight-medium;
+    color: #171717;
+  }
+  .graph{
+    height: calc($screen-ratio*4);
+    width: calc($screen-ratio*13);
+  }
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: calc($screen-ratio * 1.4);
+  background-color: $background-color-light;
+  padding: calc($screen-ratio*4.5);
+  .title{
+    font-weight: $font-weight-semibold;
+    font-size: calc($screen-ratio*1.7);
+  }
+
+  .cardContainer {
+    display: flex;
+    gap: calc($screen-ratio * 0.7);
+  }
+}
