@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$screen-ratio: 1vw;
+@import "../../theme.scss";
+
+.trendingCoinsBox {
+  display: flex;
+  flex-direction: column;
+  gap: calc($screen-ratio * 1.7);
+  padding: calc($screen-ratio * 1.7);
+  background-color: #fff;
+
+  .heading {
+    font-size: calc($screen-ratio * 1.7);
+    font-weight: $font-weight-semibold;
+    color: #0f1629;
+  }
+
+  .coinsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: calc($screen-ratio * 1.4);
+  }
+}

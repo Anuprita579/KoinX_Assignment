@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+$screen-ratio: 1vw;
+@import "../../theme.scss";
+
+.heading {
+  display: flex;
+  gap: calc($screen-ratio * 0.75);
+  align-items: center;
+  justify-content: space-between;
+
+  .nameSection {
+    display: flex;
+    gap: calc($screen-ratio * 0.75);
+    align-items: center;
+
+    .icon {
+      width: calc($screen-ratio * 2);
+      height: calc($screen-ratio * 2);
+      border-radius: calc($screen-ratio * 1);
+    }
+
+    .symbol {
+      font-size: calc($screen-ratio * 1.1);
+      color: #202020;
+    }
+  }
+
+  .priceChange {
+    padding: calc($screen-ratio * 0.2) calc($screen-ratio * 0.5);
+
+    &.profit {
+      color: #32be88;
+      background-color: #0ab27d0f;
+    }
+    &.loss {
+      color: #f7324c;
+      background-color: #ee68551a;
+    }
+  }
+}

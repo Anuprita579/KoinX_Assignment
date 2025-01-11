@@ -8,7 +8,6 @@ const HomePath = () => {
   ];
   return (
     <div>
-      <p>webwjehbdwjhbed</p>
       <BreadCrumbs paths={paths} />
     </div>
   );

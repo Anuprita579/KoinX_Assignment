@@ -2,21 +2,7 @@ import React from "react";
 import styles from "./styles.module.scss";
 import CryptoHeader from "../CryptoHeader/CryptoHeader";
 
-const CryptoCard = (props) => {
-  const { price_btc, data } = props;
-  const { sparkline } = data;
-
-  return (
-    <div className={styles.cryptoCard}>
-      <CryptoHeader {...props} />
-
-      <p className={styles.price}>{price_btc.toFixed(2)}</p>
-
-      <img src={sparkline} alt="icon" className={styles.graph} />
-    </div>
-  );
-};
-const Footer = () => {
+const TrendingCoins = () => {
   const coinsInfo = [
     {
       item: {
@@ -45,17 +31,16 @@ const Footer = () => {
       },
     },
   ];
-  return (
-    <div className={styles.footerContainer}>
-      <p className={styles.title}>You May Also Like</p>
 
-      <div className={styles.cardContainer}>
+  return (
+    <div className={styles.trendingCoinsBox}>
+      <p className={styles.heading}>Trending Coins (24h)</p>
+      <div className={styles.coinsContainer}>
         {coinsInfo.map((coin, i) => (
-          <CryptoCard {...coin.item} />
+          <CryptoHeader key={i} {...{ ...coin.item, showName: true }} />
         ))}
       </div>
     </div>
   );
 };
-
-export default Footer;
+export default TrendingCoins;

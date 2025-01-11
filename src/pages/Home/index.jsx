@@ -5,6 +5,7 @@ import StockGraph from "./StockGraph";
 import TabbedComponent from "../../commonComponents/TabbedComponent";
 import Performance from "../../components/Performance/Performance";
 import Footer from "../../components/Footer/Footer";
+import TrendingCoins from "../../components/TrendingCoins/TrendingCoins";
 
 const tabsList = [
   "Overview",
@@ -19,10 +20,17 @@ const tabsList = [
 const index = () => {
   return (
     <div className={styles.homePage}>
-      <HomePath />
-      <StockGraph />
-      <TabbedComponent tabsList={tabsList} />
-      <Performance />
+      <div className={styles.mainPage}>
+        <div className={styles.leftSection}>
+          <HomePath />
+          <StockGraph />
+          <TabbedComponent tabsList={tabsList} />
+          <Performance />
+        </div>
+        <div className={styles.rightSection}>
+          <TrendingCoins />
+        </div>
+      </div>
       <Footer />
     </div>
   );
