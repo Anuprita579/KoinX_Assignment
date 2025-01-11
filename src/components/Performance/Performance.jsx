@@ -1,18 +1,22 @@
 import React from "react";
 import styles from "./styles.module.scss";
+import ToolTipComponent from "../../commonComponents/ToolTipComponent";
+import FixedProgressBar from "../../commonComponents/FixedProgressBar";
+import InfoIcon from '@mui/icons-material/Info';
 
 const Trend = (props) => {
-  const { low, low_text, high, high_text } = props;
+  const { low, low_text, high, high_text, value, maxValue } = props;
 
   return (
     <div className={styles.trendBox}>
       <div className={styles.lowBox}>
         <p className={styles.text}>{low_text}</p>
-        <p className={styles.value}>{low}</p>
+        <p className={styles.values}>{low}</p>
       </div>
+      <FixedProgressBar value={value} maxValue={maxValue} />
       <div className={styles.lowBox}>
         <p className={styles.text}>{high_text}</p>
-        <p className={styles.value}>{high}</p>
+        <p className={styles.values}>{high}</p>
       </div>
     </div>
   );
@@ -54,12 +58,15 @@ const Performance = () => {
       low_text: "Today’s Low",
       high: "49,343.83",
       high_text: "Today’s High",
+      value: 48637.83,
+      maxValue: 100000
     },
     {
       low: "16,930.22",
       low_text: "52W Low",
       high: "49,743.83",
       high_text: "52W High",
+      maxValue: 100000
     },
   ];
   const bitcoinStats = [
@@ -99,7 +106,7 @@ const Performance = () => {
 
       <div className={styles.fundamentalContainer}>
         <p className={`${styles.title} ${styles.fundamentalTitle}`}>
-          Fundamentals
+          Fundamentals <ToolTipComponent title="Fundamentals" children={<InfoIcon className={styles.infoicon}/>} className={styles.tooltipStyle}/>
         </p>
 
         <div className={styles.statsDetailsBox}>

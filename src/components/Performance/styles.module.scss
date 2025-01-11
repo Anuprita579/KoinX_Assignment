@@ -28,6 +28,16 @@ $screen-ratio: 1vw;
     .fundamentalTitle {
       font-size: calc($screen-ratio * 1.251);
     }
+    .tooltipStyle{
+      padding: 0 !important;
+      .infoicon{
+        color: #ABB9BF;
+      }
+    }
+    .tooltipStyle:hover{
+      background-color: transparent;
+    }
+    
 
     .statsDetailsBox {
       display: flex;
@@ -43,6 +53,8 @@ $screen-ratio: 1vw;
 .trendBox {
   width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: calc($screen-ratio * 2.5);
 
   .lowBox {
@@ -83,6 +95,7 @@ $screen-ratio: 1vw;
 
     .value {
       color: #111827;
+      font-weight: $font-weight-semibold;
 
       span {
         padding-left: calc($screen-ratio * 0.5);
